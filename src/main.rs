@@ -16,7 +16,7 @@ fn main() {
     const VERSION: &str = env!("CARGO_PKG_VERSION");
     const REVISION: Option<&str> = option_env!("GIT_REVISION");
     let revision = REVISION.unwrap_or("unknown");
-    let options:CliOptions = CliOptions::from_args();
+    let _options : CliOptions = CliOptions::from_args();
 
     println!("Rust easy install VERSION: {VERSION}, REVISION: {revision}");
 }

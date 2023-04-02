@@ -77,12 +77,12 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: test
-          args: --release --target ${{ matrix.target }} -- --nocapture
+          args: --release --locked --target ${{ matrix.target }} -- --nocapture
 
       - name: Build binary target/${{ matrix.target }}/release/rust-easy-install
         uses: actions-rs/cargo@v1
         with:
           use-cross: ${{ matrix.use-cross }}
           command: build
-          args: --release --target ${{ matrix.target }}
+          args: --release --locked --target ${{ matrix.target }}
 
