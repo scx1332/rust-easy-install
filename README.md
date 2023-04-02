@@ -1,0 +1,1 @@
+# rust-easy-install
